@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mahmoud Taha Othman — Control & Automation Engineering student at Menoufia University. Portfolio showcasing PLC programming, embedded systems, and industrial automation expertise." />
+  <meta property="og:title" content="Mahmoud Taha Othman | Control & Automation Engineer" />
+  <meta property="og:description"
+    content="Engineering intelligent systems through industrial automation, embedded technologies, and innovative engineering solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <title>Mahmoud Taha Othman | Control & Automation Engineer</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/mahmoud.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="Mahmoud Taha - Home">
+        <span class="brand-dot"></span>
+        <span class="brand-text">MT.</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <!-- <li><a href="#leadership" class="nav-link">Leadership</a></li> -->
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero" aria-label="Hero section">
+
+    <!-- Background layer: animated grid -->
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+
+    <!-- Particles -->
+    <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+
+    <!-- Ambient glow blobs -->
+    <div class="hero-glow-blob hero-glow-left" aria-hidden="true"></div>
+    <div class="hero-glow-blob hero-glow-right" aria-hidden="true"></div>
+
+    <!-- Background circuit traces (full width SVG) -->
+    <div class="hero-circuit-lines" aria-hidden="true">
+      <svg class="circuit-svg" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:0" />
+            <stop offset="50%" style="stop-color:#00D9FF;stop-opacity:0.35" />
+            <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:0" />
+          </linearGradient>
+          <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#397BFF;stop-opacity:0" />
+            <stop offset="50%" style="stop-color:#397BFF;stop-opacity:0.3" />
+            <stop offset="100%" style="stop-color:#397BFF;stop-opacity:0" />
+          </linearGradient>
+        </defs>
+        <!-- Left side traces -->
+        <line class="circuit-line c1" x1="0" y1="260" x2="340" y2="260" stroke="url(#cyanGrad)" stroke-width="1" />
+        <line class="circuit-line c2" x1="340" y1="260" x2="340" y2="420" stroke="rgba(0,217,255,0.25)"
+          stroke-width="1" />
+        <line class="circuit-line c3" x1="340" y1="420" x2="560" y2="420" stroke="url(#cyanGrad)" stroke-width="1" />
+        <circle cx="340" cy="260" r="3.5" fill="#00D9FF" class="circuit-node" />
+        <circle cx="340" cy="420" r="3.5" fill="#00D9FF" class="circuit-node" />
+        <circle cx="560" cy="420" r="2.5" fill="#397BFF" class="circuit-node" />
+        <!-- Right side traces -->
+        <line class="circuit-line c4" x1="1440" y1="500" x2="1120" y2="500" stroke="url(#blueGrad)" stroke-width="1" />
+        <line class="circuit-line c5" x1="1120" y1="500" x2="1120" y2="320" stroke="rgba(57,123,255,0.25)"
+          stroke-width="1" />
+        <line class="circuit-line c6" x1="1120" y1="320" x2="900" y2="320" stroke="url(#blueGrad)" stroke-width="1" />
+        <circle cx="1120" cy="500" r="3.5" fill="#397BFF" class="circuit-node" />
+        <circle cx="1120" cy="320" r="3.5" fill="#397BFF" class="circuit-node" />
+        <circle cx="900" cy="320" r="2.5" fill="#00D9FF" class="circuit-node" />
+        <!-- Bottom horizontal accent -->
+        <line x1="0" y1="860" x2="1440" y2="860" stroke="url(#cyanGrad)" stroke-width="0.5" stroke-opacity="0.4" />
+      </svg>
+    </div>
+
+    <!-- ======== MAIN GRID ======== -->
+    <div class="hero-container">
+
+      <!-- ===== LEFT: Content ===== -->
+      <div class="hero-content">
+
+        <!-- Technical label -->
+        <div class="hero-label" data-aos="fade-up" data-aos-delay="0">
+          <span class="hero-label-prefix">&gt;_</span>
+          <span>Control &amp; Automation Engineering</span>
+        </div>
+
+        <!-- Greeting + name -->
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="80">
+          <span class="hero-greeting">Hi, I'm</span>
+          <span class="hero-name">Mahmoud Taha<br />Othman</span>
+        </h1>
+
+        <!-- Main headline -->
+        <p class="hero-headline" data-aos="fade-up" data-aos-delay="160">
+          Designing Intelligent Systems for<br class="break-desktop" />
+          Industrial Automation &amp; Web Scraping
+        </p>
+
+        <!-- Description -->
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="240">
+          Specializing in industrial automation, PLC programming, and Python-based web scraping &amp; workflow
+          automation to develop practical hardware and software engineering solutions.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="320">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+            View My Projects
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <i data-lucide="mail" aria-hidden="true"></i>
+            Contact Me
+          </a>
+          <a href="assets/cv/mahmoud-taha-cv.pdf" class="btn btn-cv" download="Mahmoud-Taha-CV.pdf"
+            aria-label="Download CV PDF">
+            <i data-lucide="file-text" aria-hidden="true"></i>
+            View CV
+          </a>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="hero-stack" data-aos="fade-up" data-aos-delay="400">
+          <span class="stack-label">&amp; TECH STACK:</span>
+          <div class="stack-badges">
+            <span class="stack-badge">
+              <i data-lucide="settings" aria-hidden="true"></i>
+              Siemens PLC
+            </span>
+            <span class="stack-badge">
+              <i data-lucide="settings-2" aria-hidden="true"></i>
+              Schneider PLC
+            </span>
+            <span class="stack-badge">
+              <i data-lucide="code-2" aria-hidden="true"></i>
+              C
+            </span>
+            <span class="stack-badge">
+              <i data-lucide="terminal" aria-hidden="true"></i>
+              Python
+            </span>
+            <span class="stack-badge">
+              <i data-lucide="cpu" aria-hidden="true"></i>
+              Arduino
+            </span>
+            <span class="stack-badge">
+              <i data-lucide="circuit-board" aria-hidden="true"></i>
+              Altium Designer
+            </span>
+          </div>
+        </div>
+
+      </div><!-- /hero-content -->
+
+      <!-- ===== RIGHT: Portrait ===== -->
+      <div class="hero-portrait-wrap" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
+
+        <!-- Orbital decoration rings (behind portrait) -->
+        <div class="portrait-deco" aria-hidden="true">
+
+          <!-- Outer orbital ring -->
+          <svg class="orbit-svg orbit-outer" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="orbitGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D9FF" stop-opacity="0" />
+                <stop offset="30%" stop-color="#00D9FF" stop-opacity="0.6" />
+                <stop offset="70%" stop-color="#397BFF" stop-opacity="0.5" />
+                <stop offset="100%" stop-color="#397BFF" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="orbitGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#397BFF" stop-opacity="0" />
+                <stop offset="40%" stop-color="#397BFF" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#00D9FF" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <circle cx="270" cy="270" r="258" stroke="url(#orbitGrad1)" stroke-width="1" stroke-dasharray="6 14" />
+            <circle cx="270" cy="270" r="240" stroke="url(#orbitGrad2)" stroke-width="0.5" stroke-dasharray="2 20" />
+            <circle cx="270" cy="12" r="4" fill="#00D9FF" opacity="0.9" />
+            <circle cx="528" cy="270" r="3" fill="#397BFF" opacity="0.8" />
+            <circle cx="270" cy="528" r="4" fill="#00D9FF" opacity="0.7" />
+            <circle cx="12" cy="270" r="3" fill="#397BFF" opacity="0.8" />
+            <circle cx="452" cy="88" r="3" fill="#00D9FF" opacity="0.5" />
+            <circle cx="88" cy="452" r="3" fill="#397BFF" opacity="0.5" />
+          </svg>
+
+          <!-- Middle technical ring with tick marks -->
+          <svg class="orbit-svg orbit-mid" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="midRingGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00D9FF" stop-opacity="0.5" />
+                <stop offset="50%" stop-color="#397BFF" stop-opacity="0.3" />
+                <stop offset="100%" stop-color="#00D9FF" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="200" r="192" stroke="url(#midRingGrad)" stroke-width="0.8" />
+            <g stroke="#00D9FF" stroke-opacity="0.5" stroke-width="1.5">
+              <line x1="200" y1="8" x2="200" y2="22" />
+              <line x1="392" y1="200" x2="378" y2="200" />
+              <line x1="200" y1="392" x2="200" y2="378" />
+              <line x1="8" y1="200" x2="22" y2="200" />
+            </g>
+            <g stroke="#397BFF" stroke-opacity="0.35" stroke-width="1">
+              <line x1="336" y1="64" x2="328" y2="72" />
+              <line x1="336" y1="336" x2="328" y2="328" />
+              <line x1="64" y1="336" x2="72" y2="328" />
+              <line x1="64" y1="64" x2="72" y2="72" />
+            </g>
+          </svg>
+
+          <!-- Inner glow halo behind portrait -->
+          <div class="portrait-halo" aria-hidden="true"></div>
+
+          <!-- Schematic corner brackets -->
+          <svg class="deco-brackets" viewBox="0 0 320 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#00D9FF" stroke-opacity="0.5" stroke-width="1.5" fill="none">
+              <path d="M8,8 L8,38 L38,38" />
+              <path d="M312,8 L312,38 L282,38" />
+              <path d="M8,412 L8,382 L38,382" />
+              <path d="M312,412 L312,382 L282,382" />
+            </g>
+            <text x="46" y="32" font-size="7" fill="#00D9FF" fill-opacity="0.5" font-family="monospace"
+              letter-spacing="1">SYS.OK</text>
+            <text x="220" y="32" font-size="7" fill="#397BFF" fill-opacity="0.5" font-family="monospace"
+              letter-spacing="1">ID:MT_01</text>
+            <text x="46" y="407" font-size="7" fill="#00D9FF" fill-opacity="0.4" font-family="monospace">CTL.ENG</text>
+            <text x="208" y="407" font-size="7" fill="#397BFF" fill-opacity="0.4" font-family="monospace">ACTIVE</text>
+            <line class="portrait-scan" x1="8" y1="210" x2="312" y2="210" stroke="#00D9FF" stroke-opacity="0.3"
+              stroke-width="1" stroke-dasharray="4 8" />
+          </svg>
+
+          <!-- Small floating technical nodes -->
+          <span class="portrait-node pn-1" aria-hidden="true"></span>
+          <span class="portrait-node pn-2" aria-hidden="true"></span>
+          <span class="portrait-node pn-3" aria-hidden="true"></span>
+          <span class="portrait-node pn-4" aria-hidden="true"></span>
+
+          <!-- Connection line traces -->
+          <svg class="deco-traces" viewBox="0 0 480 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="traceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00D9FF" stop-opacity="0.5" />
+                <stop offset="100%" stop-color="#00D9FF" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="traceGrad2" x1="100%" y1="0%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#397BFF" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#397BFF" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <path d="M0,160 L60,160 L80,180 L80,260" stroke="url(#traceGrad)" stroke-width="1" fill="none" />
+            <circle cx="60" cy="160" r="2.5" fill="#00D9FF" opacity="0.7" />
+            <circle cx="80" cy="260" r="2.5" fill="#00D9FF" opacity="0.5" />
+            <path d="M480,200 L420,200 L400,220 L400,320" stroke="url(#traceGrad2)" stroke-width="1" fill="none" />
+            <circle cx="420" cy="200" r="2.5" fill="#397BFF" opacity="0.7" />
+            <circle cx="400" cy="320" r="2.5" fill="#397BFF" opacity="0.5" />
+          </svg>
+
+        </div><!-- /portrait-deco -->
+
+        <!-- The actual portrait image — no background container -->
+        <div class="portrait-img-wrap">
+          <div class="portrait-glow-base" aria-hidden="true"></div>
+          <img src="assets/images/mahmoud.png" alt="Mahmoud Taha Othman — Control & Automation Engineering Student"
+            class="portrait-img" loading="eager" />
+          <!-- Bottom fade so portrait blends into page -->
+          <div class="portrait-fade-bottom" aria-hidden="true"></div>
+        </div>
+
+        <!-- Floating info chips around portrait -->
+        <div class="float-chip chip-1">
+          <i data-lucide="settings" aria-hidden="true"></i>
+          <span>INDUSTRIAL AUTOMATION</span>
+        </div>
+        <div class="float-chip chip-2">
+          <i data-lucide="globe" aria-hidden="true"></i>
+          <span>WEB SCRAPING</span>
+        </div>
+        <div class="float-chip chip-3">
+          <i data-lucide="activity" aria-hidden="true"></i>
+          <span>CONTROL &amp; EMBEDDED</span>
+        </div>
+
+      </div><!-- /hero-portrait-wrap -->
+
+    </div><!-- /hero-container -->
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-label">SCROLL</span>
+      <div class="scroll-line">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <!-- Ambient subtle background grid & glow -->
+    <div class="about-bg-grid" aria-hidden="true"></div>
+    <div class="about-ambient-glow" aria-hidden="true"></div>
+
+    <div class="container about-container">
+
+      <!-- 1. Centered Header & Section Label -->
+      <div class="about-header-wrap" data-aos="fade-up">
+        <div class="section-label about-section-label">
+          <span class="label-num">01</span>
+          <span class="label-sep">/</span>
+          <span>Get to Know Me</span>
+        </div>
+
+        <div class="about-heading-box">
+          <!-- Thin technical decorative line behind heading -->
+          <div class="about-tech-line" aria-hidden="true">
+            <span class="tech-line-dot tech-line-dot--left"></span>
+            <span class="tech-line-bar"></span>
+            <span class="tech-line-core"></span>
+            <span class="tech-line-bar"></span>
+            <span class="tech-line-dot tech-line-dot--right"></span>
+          </div>
+
+          <h2 class="section-title about-title" id="about-heading">
+            About <em>Me</em>
+          </h2>
+        </div>
+      </div>
+
+      <!-- 2. Centered Professional Summary -->
+      <div class="about-summary-wrap" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-summary-card">
+          <p class="about-summary-p">
+            Control and Automation Engineering student at <strong>Menoufia University</strong> with a dual
+            specialization in <span class="about-hl">Industrial Automation</span> and Python-based <span
+              class="about-hl">Web Scraping</span> &amp; data extraction solutions.
+          </p>
+          <p class="about-summary-p">
+            Contributed to the design and prototyping of a PLC-controlled <span class="about-hl">Robotic Arm</span>
+            system within a live motor manufacturing environment at <span class="about-hl">El Araby Group</span>.
+            Concurrently founded and operated an independent web automation startup, delivering high-performance web
+            scrapers, automated workflows, and data pipelines for diverse client projects.
+          </p>
+          <p class="about-summary-p about-summary-p--accent">
+            Passionate about bridging industrial control systems with intelligent software automation to build scalable,
+            practical engineering solutions.
+          </p>
+        </div>
+
+        <!-- Compact Education Information Block -->
+        <div class="about-edu-strip" data-aos="fade-up" data-aos-delay="130">
+          <div class="about-edu-badge">
+            <i data-lucide="graduation-cap" class="about-edu-icon" aria-hidden="true"></i>
+            <span class="about-edu-label">Education</span>
+          </div>
+          <div class="about-edu-divider" aria-hidden="true"></div>
+          <div class="about-edu-details">
+            <span class="about-edu-major">Control and Automation Engineering</span>
+            <span class="about-edu-sep" aria-hidden="true">&bull;</span>
+            <span class="about-edu-school">Faculty of Electronic Engineering, Menoufia University</span>
+          </div>
+          <div class="about-edu-grad">
+            <i data-lucide="calendar" class="about-edu-cal" aria-hidden="true"></i>
+            <span>Expected Graduation: June 2028</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Animated Engineering Code Feature (VS Code Inspired) -->
+      <div class="about-code-feature" data-aos="fade-up" data-aos-delay="150">
+        <div class="code-feature-header">
+          <span class="code-feature-tag">
+            <span class="code-tag-pulse" aria-hidden="true"></span>
+            BEYOND THE CODE // INSIDE THE ENGINEER
+          </span>
+        </div>
+
+        <div class="code-editor-window">
+          <!-- Window Titlebar -->
+          <div class="editor-titlebar">
+            <div class="window-controls" aria-hidden="true">
+              <span class="win-btn win-close" title="Close"></span>
+              <span class="win-btn win-min" title="Minimize"></span>
+              <span class="win-btn win-max" title="Maximize"></span>
+            </div>
+
+            <!-- Tab Header -->
+            <div class="editor-tabs">
+              <div class="editor-tab active">
+                <i data-lucide="file-code" class="tab-icon" aria-hidden="true"></i>
+                <span class="tab-filename">Mahmoud.cpp</span>
+                <span class="tab-close" aria-hidden="true">&times;</span>
+              </div>
+            </div>
+
+            <!-- Breadcrumb / Status -->
+            <div class="editor-status-right">
+              <span class="editor-badge">C++20</span>
+              <span class="editor-pill"><span class="editor-status-dot"></span>ACTIVE</span>
+            </div>
+          </div>
+
+          <!-- Code Body: Line Numbers + Highlighted Typed Code -->
+          <div class="editor-body">
+            <div class="code-line-numbers" aria-hidden="true">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+              <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+              <span>11</span><span>12</span><span>13</span>
+            </div>
+            <pre class="code-content" tabindex="0"
+              aria-label="C++ Code Representation of Mahmoud"><code id="aboutCodeTarget" class="code-block"></code><span class="code-cursor" id="aboutCodeCursor" aria-hidden="true"></span></pre>
+          </div>
+
+          <!-- Editor Statusbar -->
+          <div class="editor-statusbar" aria-hidden="true">
+            <div class="status-left">
+              <span><i data-lucide="git-branch" class="status-icon"></i> main*</span>
+              <span><i data-lucide="check-circle" class="status-icon"></i> 0 errors</span>
+              <span><i data-lucide="cpu" class="status-icon"></i> PLC Target: Online</span>
+            </div>
+            <div class="status-right">
+              <span>UTF-8</span>
+              <span>C++</span>
+              <span>Control &amp; Automation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Engineering Identity Tags -->
+      <div class="about-tags-wrap" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-tags" role="list" aria-label="Core Engineering Domains">
+          <div class="about-tag" role="listitem">
+            <i data-lucide="settings" aria-hidden="true"></i>
+            <span>Industrial Automation</span>
+          </div>
+          <div class="about-tag" role="listitem">
+            <i data-lucide="globe" aria-hidden="true"></i>
+            <span>Web Scraping &amp; Data</span>
+          </div>
+          <div class="about-tag" role="listitem">
+            <i data-lucide="cpu" aria-hidden="true"></i>
+            <span>PLC Programming</span>
+          </div>
+          <div class="about-tag" role="listitem">
+            <i data-lucide="circuit-board" aria-hidden="true"></i>
+            <span>Embedded Systems</span>
+          </div>
+          <div class="about-tag" role="listitem">
+            <i data-lucide="layers" aria-hidden="true"></i>
+            <span>PCB Design</span>
+          </div>
+          <div class="about-tag" role="listitem">
+            <i data-lucide="users" aria-hidden="true"></i>
+            <span>Technical Leadership</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Four Engineering Expertise Cards -->
+      <div class="about-expertise-grid">
+        <!-- Card 1 -->
+        <article class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="expertise-card-top">
+            <span class="expertise-num">01</span>
+            <div class="expertise-icon">
+              <i data-lucide="settings" aria-hidden="true"></i>
+            </div>
+          </div>
+          <h3 class="expertise-title">Industrial Automation</h3>
+          <p class="expertise-desc">
+            PLC programming, VFD configuration, and robotic arm control within live manufacturing environments.
+          </p>
+          <div class="expertise-footer">
+            <span class="expertise-pill">Siemens &middot; Schneider &middot; VFD</span>
+          </div>
+          <div class="expertise-card-border" aria-hidden="true"></div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="expertise-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="expertise-card-top">
+            <span class="expertise-num">02</span>
+            <div class="expertise-icon">
+              <i data-lucide="globe" aria-hidden="true"></i>
+            </div>
+          </div>
+          <h3 class="expertise-title">Web Scraping &amp; Automation</h3>
+          <p class="expertise-desc">
+            Python-based web data extraction pipelines, dynamic page scraping, automated workflows, and structured
+            datasets.
+          </p>
+          <div class="expertise-footer">
+            <span class="expertise-pill">Python &middot; Scraping &middot; Pipelines</span>
+          </div>
+          <div class="expertise-card-border" aria-hidden="true"></div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="expertise-card-top">
+            <span class="expertise-num">03</span>
+            <div class="expertise-icon">
+              <i data-lucide="cpu" aria-hidden="true"></i>
+            </div>
+          </div>
+          <h3 class="expertise-title">Embedded Systems</h3>
+          <p class="expertise-desc">
+            Firmware development with Arduino AVR and PIC microcontrollers, sensor interfacing, and C programming.
+          </p>
+          <div class="expertise-footer">
+            <span class="expertise-pill">AVR &middot; PIC &middot; C Firmware</span>
+          </div>
+          <div class="expertise-card-border" aria-hidden="true"></div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="expertise-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="expertise-card-top">
+            <span class="expertise-num">04</span>
+            <div class="expertise-icon">
+              <i data-lucide="users" aria-hidden="true"></i>
+            </div>
+          </div>
+          <h3 class="expertise-title">Technical Leadership</h3>
+          <p class="expertise-desc">
+            Mentoring engineering students, leading committees, and organizing technical events across universities.
+          </p>
+          <div class="expertise-footer">
+            <span class="expertise-pill">IEEE &middot; Mentorship &middot; Events</span>
+          </div>
+          <div class="expertise-card-border" aria-hidden="true"></div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-num">02</span>
+        <span class="label-sep">/</span>
+        <span>Skills</span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100" id="skills-heading">
+        TECHNICAL <em>EXPERTISE</em>
+      </h2>
+
+      <div class="skills-grid">
+        <!-- Cat 1: Primary Focus - Industrial Automation -->
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i data-lucide="settings" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-category">Industrial Automation</h3>
+          </div>
+          <ul class="skill-list" role="list">
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Siemens S7 PLC</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Schneider Modicon PLC</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Wecon PLC</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>VFD Configuration (Altivar)</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Sensors &amp; Relay Interlocks</li>
+          </ul>
+          <div class="skill-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- Cat 2: Primary Focus - Web Scraping & Automation -->
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i data-lucide="globe" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-category">Web Scraping &amp; Automation</h3>
+          </div>
+          <ul class="skill-list" role="list">
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Python Data Extraction</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Web Automation Tools</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>HTML Parsing &amp; Extraction</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Data Cleaning &amp; Pipelines</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Automated Workflow Tasks</li>
+          </ul>
+          <div class="skill-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- Cat 3: Embedded Systems -->
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i data-lucide="cpu" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-category">Embedded Systems</h3>
+          </div>
+          <ul class="skill-list" role="list">
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Arduino (AVR)</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>PIC Microcontrollers</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>C Firmware</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Sensor &amp; I/O Interfacing</li>
+          </ul>
+          <div class="skill-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- Cat 4: PCB Design -->
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i data-lucide="circuit-board" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-category">PCB Design</h3>
+          </div>
+          <ul class="skill-list" role="list">
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Altium Designer</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>KiCad</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Schematic Design</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>PCB Layout &amp; DRC</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Gerber Export</li>
+          </ul>
+          <div class="skill-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- Cat 5: Power & Electronics -->
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i data-lucide="zap" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-category">Power &amp; Electronics</h3>
+          </div>
+          <ul class="skill-list" role="list">
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Power Electronics</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Analog Circuit Design</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Digital Circuit Design</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Motor Drives &amp; Inverters</li>
+          </ul>
+          <div class="skill-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- Cat 6: Programming & Software Tools -->
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i data-lucide="terminal" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-category">Programming &amp; Tools</h3>
+          </div>
+          <ul class="skill-list" role="list">
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>C Programming</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Python Programming</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Web Development</li>
+            <li><i data-lucide="chevron-right" aria-hidden="true"></i>Microsoft Excel / Office</li>
+          </ul>
+          <div class="skill-card-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section id="experience" class="section experience-section" aria-labelledby="experience-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-num">03</span>
+        <span class="label-sep">/</span>
+        <span>EXPERIENCE</span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100" id="experience-heading">
+        Trai<em>ning</em>
+      </h2>
+
+      <div class="timeline">
+        <!-- Timeline line -->
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <!-- Experience 1 -->
+        <article class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+          <div class="timeline-dot" aria-hidden="true">
+            <div class="dot-inner"></div>
+            <div class="dot-pulse"></div>
+          </div>
+          <div class="timeline-card exp-card">
+            <div class="exp-header">
+              <div class="exp-meta">
+                <span class="exp-date">
+                  <i data-lucide="calendar" aria-hidden="true"></i>
+                  October 2024 – December 2024
+                </span>
+              </div>
+              <h3 class="exp-title">Control Engineering Trainee</h3>
+              <div class="exp-org">
+                <i data-lucide="building-2" aria-hidden="true"></i>
+                <span>El Araby Group — Motors &amp; Home Appliances Manufacturing</span>
+              </div>
+              <div class="exp-location">
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                <span>Menoufia, Egypt</span>
+              </div>
+            </div>
+            <ul class="exp-bullets" role="list">
+              <li>Contributed to the end-to-end design and prototyping of a PLC-controlled robotic arm system for the
+                stator insulation production line, reducing manual handling in a critical assembly stage.</li>
+              <li>Automated the insulation brushing sub-process preceding wire winding and rotor installation, improving
+                process repeatability and cycle-time consistency.</li>
+              <li>Collaborated with a multidisciplinary team to implement control logic sequences aligned with
+                production safety standards and operational targets.</li>
+              <li>Supported prototype validation testing against production cycle-time requirements and mechanical
+                accuracy benchmarks.</li>
+            </ul>
+            <div class="exp-tags" role="list" aria-label="Technologies used">
+              <span class="exp-tag" role="listitem">Siemens S7 PLC</span>
+              <span class="exp-tag" role="listitem">Ladder Logic</span>
+              <span class="exp-tag" role="listitem">Robotics</span>
+              <span class="exp-tag" role="listitem">Industrial Safety</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Experience 2 -->
+        <article class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+          <div class="timeline-dot" aria-hidden="true">
+            <div class="dot-inner"></div>
+            <div class="dot-pulse"></div>
+          </div>
+          <div class="timeline-card exp-card">
+            <div class="exp-header">
+              <div class="exp-meta">
+                <span class="exp-date">
+                  <i data-lucide="calendar" aria-hidden="true"></i>
+                  July 2024 – March 2025
+                </span>
+              </div>
+              <h3 class="exp-title">Founder &amp; Technical Lead</h3>
+              <div class="exp-org">
+                <i data-lucide="briefcase" aria-hidden="true"></i>
+                <span>Web Automation &amp; Data Solutions — Independent Startup</span>
+              </div>
+              <div class="exp-location">
+                <i data-lucide="globe" aria-hidden="true"></i>
+                <span>Remote</span>
+              </div>
+            </div>
+            <ul class="exp-bullets" role="list">
+              <li>Founded and operated a technical startup delivering custom web automation and data extraction
+                services, managing the full project lifecycle from client briefing through deployment.</li>
+              <li>Engineered Python-based web scraping and workflow automation tools for clients across multiple
+                platforms.</li>
+              <li>Applied structured debugging and iterative testing to maintain solution reliability across frequently
+                changing platform environments.</li>
+              <li>Gained hands-on exposure to startup operations, client requirement scoping, and independent technical
+                project management.</li>
+            </ul>
+            <div class="exp-tags" role="list" aria-label="Technologies used">
+              <span class="exp-tag" role="listitem">Python</span>
+              <span class="exp-tag" role="listitem">Web Scraping</span>
+              <span class="exp-tag" role="listitem">Workflow Automation</span>
+              <span class="exp-tag" role="listitem">Project Management</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== LEADERSHIP SECTION ========== -->
+  <section id="leadership" class="section leadership-section" aria-labelledby="leadership-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-num">04</span>
+        <span class="label-sep">/</span>
+        <span>LEADERSHIP</span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100" id="leadership-heading">
+        Volunteering <em> & </em>Activities
+      </h2>
+
+      <div class="leadership-grid">
+        <article class="leadership-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="leadership-icon"><i data-lucide="shield" aria-hidden="true"></i></div>
+          <div class="leadership-content">
+            <div class="leadership-period">2024 – Present</div>
+            <h3>Vice President — Student Activities</h3>
+            <p class="leadership-org">Student Union, Faculty of Electronic Engineering, Menoufia</p>
+            <div class="leadership-tags">
+              <span>Leadership</span><span>Communication</span><span>Organization</span>
+            </div>
+          </div>
+          <div class="leadership-card-border" aria-hidden="true"></div>
+        </article>
+
+        <article class="leadership-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="leadership-icon"><i data-lucide="trophy" aria-hidden="true"></i></div>
+          <div class="leadership-content">
+            <div class="leadership-period">2024</div>
+            <h3>Head of Organizing Committee</h3>
+            <p class="leadership-org">FEE Control Exhibition</p>
+            <div class="leadership-tags">
+              <span>Event Management</span><span>Engineering</span>
+            </div>
+          </div>
+          <div class="leadership-card-border" aria-hidden="true"></div>
+        </article>
+
+        <article class="leadership-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="leadership-icon"><i data-lucide="users" aria-hidden="true"></i></div>
+          <div class="leadership-content">
+            <div class="leadership-period">2024</div>
+            <h3>Organizer</h3>
+            <p class="leadership-org">First Employment Forum — Faculty of Engineering, Menouf</p>
+            <div class="leadership-tags">
+              <span>Career Development</span><span>Coordination</span>
+            </div>
+          </div>
+          <div class="leadership-card-border" aria-hidden="true"></div>
+        </article>
+
+        <article class="leadership-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="leadership-icon"><i data-lucide="terminal" aria-hidden="true"></i></div>
+          <div class="leadership-content">
+            <div class="leadership-period">2023 – 2025</div>
+            <h3>Head of C Programming Committee</h3>
+            <p class="leadership-org">IEEE Al-Azhar Student Branch</p>
+            <div class="leadership-tags">
+              <span>Technical Leadership</span><span>IEEE</span><span>C Programming</span>
+            </div>
+          </div>
+          <div class="leadership-card-border" aria-hidden="true"></div>
+        </article>
+
+        <article class="leadership-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="leadership-icon"><i data-lucide="graduation-cap" aria-hidden="true"></i></div>
+          <div class="leadership-content">
+            <div class="leadership-period">2023 – 2024</div>
+            <h3>Technical Mentor — C &amp; Embedded Systems</h3>
+            <p class="leadership-org">GDGC Al-Azhar</p>
+            <div class="leadership-tags">
+              <span>Mentorship</span><span>Embedded Systems</span><span>GDGC</span>
+            </div>
+          </div>
+          <div class="leadership-card-border" aria-hidden="true"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS SECTION ========== -->
+  <section id="certifications" class="section certs-section" aria-labelledby="certs-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-num">05</span>
+        <span class="label-sep">/</span>
+        <span>PROFESSIONAL GROWTH</span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100" id="certs-heading">
+        CERTIFI<em>CATIONS.</em>
+      </h2>
+
+      <div class="certs-grid">
+        <article class="cert-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="cert-media-wrap">
+            <img src="assets/images/certificates/cert-industrial-automation.jpg"
+              alt="Basic Industrial Automation Certificate" class="cert-real-img"
+              onerror="this.classList.add('img-hidden');" />
+            <div class="cert-placeholder">
+              <i data-lucide="award" class="cert-placeholder-icon" aria-hidden="true"></i>
+              <span class="cert-placeholder-title">Certificate Preview</span>
+              <span class="cert-placeholder-file">cert-industrial-automation.jpg</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top-row">
+              <div class="cert-icon"><i data-lucide="award" aria-hidden="true"></i></div>
+              <div class="cert-num">01</div>
+            </div>
+            <h3 class="cert-title">Basic Industrial Automation</h3>
+            <p class="cert-issuer">HA Consulting Group</p>
+            <div class="cert-date">
+              <i data-lucide="calendar" aria-hidden="true"></i>
+              July – August 2025
+            </div>
+            <div class="cert-topics">
+              <span>PLC</span>
+              <span>VFD</span>
+              <span>Classic Control</span>
+            </div>
+          </div>
+          <div class="cert-card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="cert-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="cert-media-wrap">
+            <img src="assets/images/certificates/cert-c-programming.jpg" alt="C Programming Certificate"
+              class="cert-real-img" onerror="this.classList.add('img-hidden');" />
+            <div class="cert-placeholder">
+              <i data-lucide="award" class="cert-placeholder-icon" aria-hidden="true"></i>
+              <span class="cert-placeholder-title">Certificate Preview</span>
+              <span class="cert-placeholder-file">cert-c-programming.jpg</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top-row">
+              <div class="cert-icon"><i data-lucide="award" aria-hidden="true"></i></div>
+              <div class="cert-num">02</div>
+            </div>
+            <h3 class="cert-title">C Programming</h3>
+            <p class="cert-issuer">IEEE Al-Azhar</p>
+            <div class="cert-date">
+              <i data-lucide="calendar" aria-hidden="true"></i>
+              November 2023 – September 2024
+            </div>
+            <div class="cert-topics">
+              <span>C Language</span>
+              <span>Algorithms</span>
+              <span>IEEE</span>
+            </div>
+          </div>
+          <div class="cert-card-glow" aria-hidden="true"></div>
+        </article>
+
+        <article class="cert-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="cert-media-wrap">
+            <img src="assets/images/certificates/cert-altium-pcb.jpg" alt="PCB Design with Altium Designer Certificate"
+              class="cert-real-img" onerror="this.classList.add('img-hidden');" />
+            <div class="cert-placeholder">
+              <i data-lucide="award" class="cert-placeholder-icon" aria-hidden="true"></i>
+              <span class="cert-placeholder-title">Certificate Preview</span>
+              <span class="cert-placeholder-file">cert-altium-pcb.jpg</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top-row">
+              <div class="cert-icon"><i data-lucide="award" aria-hidden="true"></i></div>
+              <div class="cert-num">03</div>
+            </div>
+            <h3 class="cert-title">PCB Design with Altium Designer</h3>
+            <p class="cert-issuer">Eng. Ahmed Abolfotouh</p>
+            <div class="cert-date">
+              <i data-lucide="calendar" aria-hidden="true"></i>
+              May 2026
+            </div>
+            <div class="cert-topics">
+              <span>Altium</span>
+              <span>PCB Layout</span>
+              <span>Schematic</span>
+            </div>
+          </div>
+          <div class="cert-card-glow" aria-hidden="true"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-num">06</span>
+        <span class="label-sep">/</span>
+        <span>ENGINEERING WORK</span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100" id="projects-heading">
+        Proj<em>ects</em>
+      </h2>
+
+      <!-- Featured project card 1: Industrial Automation -->
+      <article class="project-featured" data-aos="fade-up" data-aos-delay="150"
+        aria-label="Featured project: Robotic Arm Automation Prototype">
+        <div class="project-featured-image" aria-hidden="true">
+          <div class="project-media-wrap">
+            <img src="assets/images/projects/project-robotic-arm.jpg" alt="Robotic Arm Automation Prototype Screenshot"
+              class="project-real-img" onerror="this.classList.add('img-hidden');" />
+            <div class="project-placeholder-view">
+              <div class="project-img-overlay"></div>
+              <!-- Engineering illustration for project -->
+              <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="project-svg"
+                aria-label="Robotic arm automation illustration">
+                <defs>
+                  <linearGradient id="projBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#080D18" />
+                    <stop offset="100%" style="stop-color:#0a1520" />
+                  </linearGradient>
+                  <radialGradient id="projGlow" cx="30%" cy="60%" r="45%">
+                    <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:0.12" />
+                    <stop offset="100%" style="stop-color:#080D18;stop-opacity:0" />
+                  </radialGradient>
+                  <filter id="projGlowFilter">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <rect width="800" height="450" fill="url(#projBg)" />
+                <ellipse cx="250" cy="300" rx="250" ry="180" fill="url(#projGlow)" />
+
+                <!-- Grid -->
+                <g stroke="#00D9FF" stroke-width="0.3" stroke-opacity="0.06">
+                  <line x1="0" y1="50" x2="800" y2="50" />
+                  <line x1="0" y1="100" x2="800" y2="100" />
+                  <line x1="0" y1="150" x2="800" y2="150" />
+                  <line x1="0" y1="200" x2="800" y2="200" />
+                  <line x1="0" y1="250" x2="800" y2="250" />
+                  <line x1="0" y1="300" x2="800" y2="300" />
+                  <line x1="0" y1="350" x2="800" y2="350" />
+                  <line x1="0" y1="400" x2="800" y2="400" />
+                  <line x1="80" y1="0" x2="80" y2="450" />
+                  <line x1="160" y1="0" x2="160" y2="450" />
+                  <line x1="240" y1="0" x2="240" y2="450" />
+                  <line x1="320" y1="0" x2="320" y2="450" />
+                  <line x1="400" y1="0" x2="400" y2="450" />
+                  <line x1="480" y1="0" x2="480" y2="450" />
+                  <line x1="560" y1="0" x2="560" y2="450" />
+                  <line x1="640" y1="0" x2="640" y2="450" />
+                  <line x1="720" y1="0" x2="720" y2="450" />
+                </g>
+
+                <!-- Conveyor belt -->
+                <rect x="50" y="370" width="500" height="18" rx="4" fill="#0d1728" stroke="#397BFF" stroke-width="1" />
+                <line x1="50" y1="378" x2="550" y2="378" stroke="#397BFF" stroke-width="0.5" stroke-opacity="0.5"
+                  stroke-dasharray="20,10" />
+                <!-- Conveyor rollers -->
+                <circle cx="80" cy="379" r="8" fill="#111E30" stroke="#00D9FF" stroke-width="1" />
+                <circle cx="160" cy="379" r="8" fill="#111E30" stroke="#00D9FF" stroke-width="1" />
+                <circle cx="240" cy="379" r="8" fill="#111E30" stroke="#00D9FF" stroke-width="1" />
+                <circle cx="320" cy="379" r="8" fill="#111E30" stroke="#00D9FF" stroke-width="1" />
+                <circle cx="400" cy="379" r="8" fill="#111E30" stroke="#00D9FF" stroke-width="1" />
+                <circle cx="480" cy="379" r="8" fill="#111E30" stroke="#00D9FF" stroke-width="1" />
+                <circle cx="520" cy="379" r="8" fill="#111E30" stroke="#00D9FF" stroke-width="1" />
+                <!-- Stator on conveyor -->
+                <rect x="200" y="345" width="80" height="28" rx="4" fill="#111E30" stroke="#00D9FF" stroke-width="1"
+                  stroke-opacity="0.8" />
+                <circle cx="240" cy="359" r="10" fill="#0d1728" stroke="#397BFF" stroke-width="1" />
+                <circle cx="240" cy="359" r="5" fill="#00D9FF" opacity="0.5" />
+                <text x="208" y="342" font-size="8" fill="#00D9FF" fill-opacity="0.7"
+                  font-family="monospace">STATOR</text>
+
+                <!-- Robotic arm - main body -->
+                <rect x="260" y="290" width="40" height="80" rx="5" fill="#0d1728" stroke="#00D9FF" stroke-width="1"
+                  stroke-opacity="0.8" />
+                <!-- Rotating base -->
+                <ellipse cx="280" cy="290" rx="35" ry="12" fill="#111E30" stroke="#00D9FF" stroke-width="1.2"
+                  filter="url(#projGlowFilter)" />
+                <ellipse cx="280" cy="290" rx="20" ry="7" fill="#0d1a2d" stroke="#397BFF" stroke-width="0.8" />
+                <circle cx="280" cy="290" r="5" fill="#00D9FF" opacity="0.9" />
+
+                <!-- First segment -->
+                <rect x="255" y="220" width="50" height="80" rx="8" fill="#111E30" stroke="#00D9FF" stroke-width="1"
+                  transform="rotate(-10 280 260)" />
+                <!-- Second segment -->
+                <rect x="240" y="140" width="44" height="90" rx="7" fill="#0d1a2d" stroke="#397BFF" stroke-width="1"
+                  transform="rotate(-30 262 185)" />
+                <!-- Third segment (forearm) -->
+                <rect x="200" y="90" width="38" height="70" rx="6" fill="#111E30" stroke="#00D9FF" stroke-width="0.9"
+                  transform="rotate(-60 219 125)" />
+
+                <!-- Joints -->
+                <circle cx="275" cy="225" r="20" fill="#0d1a2d" stroke="#00D9FF" stroke-width="1.5"
+                  filter="url(#projGlowFilter)" />
+                <circle cx="275" cy="225" r="11" fill="#111E30" stroke="#397BFF" stroke-width="1" />
+                <circle cx="275" cy="225" r="4" fill="#00D9FF" />
+
+                <circle cx="246" cy="150" r="17" fill="#0d1a2d" stroke="#397BFF" stroke-width="1.2"
+                  filter="url(#projGlowFilter)" />
+                <circle cx="246" cy="150" r="9" fill="#111E30" stroke="#00D9FF" stroke-width="0.8" />
+                <circle cx="246" cy="150" r="3" fill="#397BFF" />
+
+                <!-- End effector over stator -->
+                <g transform="rotate(-75 212 102)" filter="url(#projGlowFilter)">
+                  <rect x="197" y="96" width="30" height="12" rx="3" fill="#111E30" stroke="#00D9FF"
+                    stroke-width="1.2" />
+                  <rect x="224" y="93" width="20" height="5" rx="2" fill="#0d1a2d" stroke="#00D9FF"
+                    stroke-width="0.8" />
+                  <rect x="224" y="104" width="20" height="5" rx="2" fill="#0d1a2d" stroke="#00D9FF"
+                    stroke-width="0.8" />
+                </g>
+
+                <!-- PLC panel -->
+                <rect x="600" y="150" width="150" height="200" rx="8" fill="#0d1728" stroke="#00D9FF" stroke-width="1"
+                  stroke-opacity="0.7" />
+                <rect x="610" y="160" width="130" height="30" rx="4" fill="#111E30" stroke="#397BFF"
+                  stroke-width="0.5" />
+                <text x="620" y="180" font-size="10" fill="#00D9FF" font-family="monospace">SIEMENS S7</text>
+                <!-- PLC indicator LEDs -->
+                <circle cx="620" cy="210" r="4" fill="#00ff88" opacity="0.9" />
+                <circle cx="635" cy="210" r="4" fill="#00D9FF" opacity="0.9" class="pulse-dot" />
+                <circle cx="650" cy="210" r="4" fill="#397BFF" opacity="0.9" />
+                <circle cx="665" cy="210" r="4" fill="#ff4444" opacity="0.5" />
+                <!-- PLC ports -->
+                <rect x="615" y="230" width="120" height="8" rx="2" fill="#080D18" stroke="#397BFF"
+                  stroke-width="0.5" />
+                <rect x="615" y="248" width="120" height="8" rx="2" fill="#080D18" stroke="#397BFF"
+                  stroke-width="0.5" />
+                <rect x="615" y="266" width="120" height="8" rx="2" fill="#080D18" stroke="#00D9FF"
+                  stroke-width="0.5" />
+                <!-- Wiring from PLC to arm -->
+                <path d="M600 280 Q540 280 450 230 Q400 200 320 200 Q290 200 275 225" stroke="#00D9FF" stroke-width="1"
+                  fill="none" stroke-opacity="0.4" stroke-dasharray="5,5" />
+                <text x="460" y="192" font-size="7" fill="#00D9FF" fill-opacity="0.6" font-family="monospace">CTRL
+                  SIGNAL</text>
+                <text x="618" y="145" font-size="8" fill="#00D9FF" fill-opacity="0.7" font-family="monospace">PLC
+                  PANEL</text>
+
+                <!-- Safety interlocks visualization -->
+                <g transform="translate(590, 390)">
+                  <rect x="0" y="0" width="100" height="40" rx="4" fill="#0d1728" stroke="#ff9900" stroke-width="0.8"
+                    stroke-opacity="0.7" />
+                  <text x="8" y="14" font-size="7" fill="#ff9900" fill-opacity="0.8" font-family="monospace">SAFETY
+                    RELAY</text>
+                  <circle cx="15" cy="28" r="4" fill="#00ff88" opacity="0.8" />
+                  <circle cx="30" cy="28" r="4" fill="#ff9900" opacity="0.8" class="pulse-dot" />
+                  <text x="40" y="31" font-size="6" fill="#ff9900" fill-opacity="0.7"
+                    font-family="monospace">INTERLOCK</text>
+                </g>
+
+                <!-- Scan line -->
+                <line class="scan-line" x1="50" y1="180" x2="560" y2="180" stroke="url(#cyanLine)" stroke-width="1"
+                  stroke-opacity="0.5" />
+
+                <!-- Corner brackets -->
+                <g stroke="#00D9FF" stroke-width="1.2" fill="none" stroke-opacity="0.4">
+                  <path d="M20,20 L20,8 L32,8" />
+                  <path d="M780,20 L780,8 L768,8" />
+                  <path d="M20,430 L20,442 L32,442" />
+                  <path d="M780,430 L780,442 L768,442" />
+                </g>
+
+                <!-- Label -->
+                <text x="30" y="30" font-size="9" fill="#00D9FF" fill-opacity="0.5" font-family="monospace"
+                  letter-spacing="2">EL ARABY GROUP — STATOR PRODUCTION LINE</text>
+              </svg>
+
+              <!-- Image Placeholder Info Pill -->
+              <div class="project-placeholder-badge">
+                <i data-lucide="image" class="placeholder-badge-icon" aria-hidden="true"></i>
+                <span class="placeholder-badge-label">Screenshot Placeholder</span>
+                <span class="placeholder-badge-file">assets/images/projects/project-robotic-arm.jpg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-featured-info">
+          <div class="project-meta">
+            <span class="project-category">Industrial Internship Project — El Araby Group</span>
+            <span class="project-year">October 2024 – December 2024</span>
+          </div>
+
+          <h3 class="project-title">Robotic Arm Automation Prototype</h3>
+
+          <p class="project-desc">
+            Designed control system architecture for robotic arms handling insulation material within a live motor
+            stator production environment. The system integrated PLC logic with conveyor coordination and safety
+            interlocks to meet production cycle-time requirements.
+          </p>
+
+          <div class="project-contributions">
+            <h4><i data-lucide="list-checks" aria-hidden="true"></i> Key Contributions</h4>
+            <ul role="list">
+              <li>Designed control system architecture for robotic arm operations</li>
+              <li>Developed and tested PLC ladder-logic sequences</li>
+              <li>Coordinated robotic motion with upstream and downstream conveyor stages</li>
+              <li>Implemented relay-based safety interlocks</li>
+              <li>Defined operational boundaries to satisfy industrial safety requirements</li>
+            </ul>
+          </div>
+
+          <div class="project-tech" role="list" aria-label="Technologies used">
+            <span class="tech-tag" role="listitem">Siemens S7 PLC</span>
+            <span class="tech-tag" role="listitem">Industrial Proximity Sensors</span>
+            <span class="tech-tag" role="listitem">Position Sensors</span>
+            <span class="tech-tag" role="listitem">Relay Safety Interlocks</span>
+            <span class="tech-tag" role="listitem">Structured Automation Wiring</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Featured project card 2: Web Scraping & Automation -->
+      <article class="project-featured" data-aos="fade-up" data-aos-delay="250"
+        aria-label="Featured project: Web Scraping &amp; Data Extraction Pipeline">
+        <div class="project-featured-image" aria-hidden="true">
+          <div class="project-media-wrap">
+            <img src="assets/images/projects/project-web-scraping.jpg"
+              alt="Web Scraping &amp; Data Extraction Pipeline Screenshot" class="project-real-img"
+              onerror="this.classList.add('img-hidden');" />
+            <div class="project-placeholder-view">
+              <div class="project-img-overlay"></div>
+              <!-- Web Scraping Architecture Illustration -->
+              <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" class="project-svg"
+                aria-label="Web scraping architecture illustration">
+                <defs>
+                  <linearGradient id="scrapeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#080D18" />
+                    <stop offset="100%" style="stop-color:#0a1728" />
+                  </linearGradient>
+                  <radialGradient id="scrapeGlow" cx="60%" cy="50%" r="45%">
+                    <stop offset="0%" style="stop-color:#397BFF;stop-opacity:0.15" />
+                    <stop offset="100%" style="stop-color:#080D18;stop-opacity:0" />
+                  </radialGradient>
+                </defs>
+
+                <rect width="800" height="450" fill="url(#scrapeBg)" />
+                <ellipse cx="450" cy="225" rx="300" ry="200" fill="url(#scrapeGlow)" />
+
+                <!-- Grid lines -->
+                <g stroke="#397BFF" stroke-width="0.3" stroke-opacity="0.08">
+                  <line x1="0" y1="60" x2="800" y2="60" />
+                  <line x1="0" y1="120" x2="800" y2="120" />
+                  <line x1="0" y1="180" x2="800" y2="180" />
+                  <line x1="0" y1="240" x2="800" y2="240" />
+                  <line x1="0" y1="300" x2="800" y2="300" />
+                  <line x1="0" y1="360" x2="800" y2="360" />
+                  <line x1="100" y1="0" x2="100" y2="450" />
+                  <line x1="250" y1="0" x2="250" y2="450" />
+                  <line x1="400" y1="0" x2="400" y2="450" />
+                  <line x1="550" y1="0" x2="550" y2="450" />
+                  <line x1="700" y1="0" x2="700" y2="450" />
+                </g>
+
+                <!-- Data Flow Diagram Blocks -->
+                <!-- Step 1: Web Sources -->
+                <rect x="60" y="140" width="160" height="170" rx="8" fill="#0D1728" stroke="rgba(0,217,255,0.3)"
+                  stroke-width="1.2" />
+                <rect x="75" y="155" width="130" height="24" rx="4" fill="#111E30" stroke="rgba(0,217,255,0.2)"
+                  stroke-width="0.8" />
+                <text x="85" y="171" font-size="9" fill="#00D9FF" font-family="monospace">&gt; WEB SOURCES</text>
+                <text x="75" y="205" font-size="9" fill="#A0AEC0" font-family="monospace">&bull; Dynamic HTML</text>
+                <text x="75" y="230" font-size="9" fill="#A0AEC0" font-family="monospace">&bull; DOM Elements</text>
+                <text x="75" y="255" font-size="9" fill="#A0AEC0" font-family="monospace">&bull; JSON Endpoints</text>
+                <text x="75" y="280" font-size="9" fill="#A0AEC0" font-family="monospace">&bull; Client Targets</text>
+
+                <!-- Flow arrow 1 -->
+                <path d="M220 225 L310 225" stroke="#00D9FF" stroke-width="1.5" stroke-dasharray="4,4" />
+                <polygon points="315,225 305,220 305,230" fill="#00D9FF" />
+                <text x="235" y="215" font-size="8" fill="#00D9FF" fill-opacity="0.7" font-family="monospace">HTTP
+                  REQ</text>
+
+                <!-- Step 2: Extraction Engine (Center) -->
+                <rect x="320" y="110" width="200" height="230" rx="10" fill="#111E30" stroke="#00D9FF"
+                  stroke-width="1.5" />
+                <rect x="335" y="125" width="170" height="28" rx="4" fill="#080D18" stroke="#397BFF" stroke-width="1" />
+                <circle cx="350" cy="139" r="4" fill="#00D9FF" class="pulse-dot" />
+                <text x="362" y="143" font-size="10" fill="#00D9FF" font-weight="bold" font-family="monospace">PYTHON
+                  SCRAPER</text>
+
+                <rect x="335" y="168" width="170" height="30" rx="4" fill="#0D1728" stroke="rgba(0,217,255,0.15)"
+                  stroke-width="0.8" />
+                <text x="345" y="187" font-size="9" fill="#F4F7FB" font-family="monospace">BeautifulSoup / Regex</text>
+
+                <rect x="335" y="210" width="170" height="30" rx="4" fill="#0D1728" stroke="rgba(0,217,255,0.15)"
+                  stroke-width="0.8" />
+                <text x="345" y="229" font-size="9" fill="#F4F7FB" font-family="monospace">Anti-Block &amp;
+                  Retries</text>
+
+                <rect x="335" y="252" width="170" height="30" rx="4" fill="#0D1728" stroke="rgba(0,217,255,0.15)"
+                  stroke-width="0.8" />
+                <text x="345" y="271" font-size="9" fill="#F4F7FB" font-family="monospace">Data Cleansing</text>
+
+                <rect x="335" y="294" width="170" height="30" rx="4" fill="#0D1728" stroke="rgba(0,217,255,0.15)"
+                  stroke-width="0.8" />
+                <text x="345" y="313" font-size="9" fill="#7EE787" font-family="monospace">&gt; Schema Validation
+                  OK</text>
+
+                <!-- Flow arrow 2 -->
+                <path d="M520 225 L600 225" stroke="#397BFF" stroke-width="1.5" stroke-dasharray="4,4" />
+                <polygon points="605,225 595,220 595,230" fill="#397BFF" />
+                <text x="532" y="215" font-size="8" fill="#397BFF" fill-opacity="0.8"
+                  font-family="monospace">EXPORT</text>
+
+                <!-- Step 3: Structured Datasets -->
+                <rect x="610" y="140" width="140" height="170" rx="8" fill="#0D1728" stroke="rgba(57,123,255,0.4)"
+                  stroke-width="1.2" />
+                <rect x="625" y="155" width="110" height="24" rx="4" fill="#111E30" stroke="rgba(57,123,255,0.3)"
+                  stroke-width="0.8" />
+                <text x="635" y="171" font-size="9" fill="#397BFF" font-family="monospace">&gt; DATASETS</text>
+                <text x="625" y="205" font-size="9" fill="#7EE787" font-family="monospace">&bull; Clean JSON</text>
+                <text x="625" y="230" font-size="9" fill="#7EE787" font-family="monospace">&bull; Formatted CSV</text>
+                <text x="625" y="255" font-size="9" fill="#7EE787" font-family="monospace">&bull; Excel Reports</text>
+                <text x="625" y="280" font-size="9" fill="#7EE787" font-family="monospace">&bull; Live Pipelines</text>
+
+                <!-- Header badge -->
+                <text x="30" y="30" font-size="9" fill="#397BFF" fill-opacity="0.7" font-family="monospace"
+                  letter-spacing="2">INDEPENDENT STARTUP — DATA EXTRACTION ENGINE</text>
+
+                <!-- Corner brackets -->
+                <g stroke="#397BFF" stroke-width="1.2" fill="none" stroke-opacity="0.4">
+                  <path d="M20,20 L20,8 L32,8" />
+                  <path d="M780,20 L780,8 L768,8" />
+                  <path d="M20,430 L20,442 L32,442" />
+                  <path d="M780,430 L780,442 L768,442" />
+                </g>
+              </svg>
+
+              <!-- Image Placeholder Info Pill -->
+              <div class="project-placeholder-badge">
+                <i data-lucide="image" class="placeholder-badge-icon" aria-hidden="true"></i>
+                <span class="placeholder-badge-label">Screenshot Placeholder</span>
+                <span class="placeholder-badge-file">assets/images/projects/project-web-scraping.jpg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-featured-info">
+          <div class="project-meta">
+            <span class="project-category">Web Scraping &amp; Automation — Independent Startup</span>
+            <span class="project-year">July 2024 – March 2025</span>
+          </div>
+
+          <h3 class="project-title">Web Scraping &amp; Data Extraction Pipeline</h3>
+
+          <p class="project-desc">
+            Engineered custom Python-based web scraping and data extraction pipelines for commercial client projects.
+            Built resilient tools capable of navigating complex page structures, handling dynamic DOM updates, and
+            structuring
+            unstructured web data into production-ready datasets.
+          </p>
+
+          <div class="project-contributions">
+            <h4><i data-lucide="list-checks" aria-hidden="true"></i> Key Contributions</h4>
+            <ul role="list">
+              <li>Architected automated data extraction pipelines using Python, BeautifulSoup, and automation drivers
+              </li>
+              <li>Implemented dynamic content parsing, custom request headers, and anti-blocking strategies</li>
+              <li>Built automated data cleaning, schema validation, and structured exports (JSON, CSV, Excel)</li>
+              <li>Created schedule-driven scraping jobs with logging, error handling, and auto-retry routines</li>
+              <li>Managed client technical consultations, requirement scoping, and end-to-end deliverables</li>
+            </ul>
+          </div>
+
+          <div class="project-tech" role="list" aria-label="Technologies used">
+            <span class="tech-tag" role="listitem">Python</span>
+            <span class="tech-tag" role="listitem">Web Scraping</span>
+            <span class="tech-tag" role="listitem">BeautifulSoup</span>
+            <span class="tech-tag" role="listitem">Data Extraction</span>
+            <span class="tech-tag" role="listitem">Workflow Automation</span>
+            <span class="tech-tag" role="listitem">JSON / CSV Pipelines</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">
+        <span class="label-num">07</span>
+        <span class="label-sep">/</span>
+        <span>Contact</span>
+      </div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100" id="contact-heading">
+        GET <em>IN </em>TOUCH
+      </h2>
+      <p class="contact-intro" data-aos="fade-up" data-aos-delay="150">
+        Have an engineering opportunity, collaboration idea, or technical project in mind? Feel free to get in touch.
+      </p>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+          <a href="mailto:mahmoud.taha.os.90@gmail.com" class="contact-info-card" aria-label="Send email to Mahmoud">
+            <div class="contact-info-icon">
+              <i data-lucide="mail" aria-hidden="true"></i>
+            </div>
+            <div class="contact-info-text">
+              <span class="contact-info-label">Email</span>
+              <span class="contact-info-value">mahmoud.taha.os.90@gmail.com</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://linkedin.com/in/mahmoud-taha2" target="_blank" rel="noopener noreferrer"
+            class="contact-info-card" aria-label="Visit LinkedIn profile">
+            <div class="contact-info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-linkedin" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </div>
+            <div class="contact-info-text">
+              <span class="contact-info-label">LinkedIn</span>
+              <span class="contact-info-value">linkedin.com/in/mahmoud-taha2</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="tel:+201100808224" class="contact-info-card" aria-label="Call Mahmoud">
+            <div class="contact-info-icon">
+              <i data-lucide="phone" aria-hidden="true"></i>
+            </div>
+            <div class="contact-info-text">
+              <span class="contact-info-label">Phone</span>
+              <span class="contact-info-value">+20 1100808224</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
+          </a>
+
+          <div class="contact-info-card contact-location" aria-label="Location">
+            <div class="contact-info-icon">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+            </div>
+            <div class="contact-info-text">
+              <span class="contact-info-label">Location</span>
+              <span class="contact-info-value">Menoufia, Egypt</span>
+            </div>
+          </div>
+
+          <div class="contact-cta-buttons">
+            <a href="mailto:mahmoud.taha.os.90@gmail.com" class="btn btn-primary btn-full">
+              <i data-lucide="send" aria-hidden="true"></i>
+              Send Email
+            </a>
+            <a href="https://linkedin.com/in/mahmoud-taha2" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary btn-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-linkedin" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="200">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+            <p class="form-note">
+              <i data-lucide="info" aria-hidden="true"></i>
+              This form opens your email client with the message pre-filled.
+            </p>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName" name="name" placeholder="Your full name" required
+                  autocomplete="name" />
+                <span class="field-error" id="nameError" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required
+                  autocomplete="email" />
+                <span class="field-error" id="emailError" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject"
+                placeholder="Project collaboration / Opportunity / Question" required />
+              <span class="field-error" id="subjectError" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5"
+                placeholder="Tell me about your project, opportunity, or idea..." required></textarea>
+              <span class="field-error" id="messageError" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-submit" id="formSubmitBtn">
+              <i data-lucide="send" aria-hidden="true"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo" aria-label="Back to top">
+            <span class="brand-dot"></span>
+            <span>MT.</span>
+          </a>
+          <p class="footer-name">Mahmoud Taha Othman</p>
+          <p class="footer-title-text">Control &amp; Automation Engineering</p>
+        </div>
+
+        <div class="footer-links" role="navigation" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/mahmoud-taha2" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-linkedin" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:mahmoud.taha.os.90@gmail.com" class="footer-social-link" aria-label="Email">
+            <i data-lucide="mail" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-line" aria-hidden="true"></div>
+        <p class="footer-copy">
+          &copy; <span id="footerYear"></span> Mahmoud Taha Othman. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/portfolio-data.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
